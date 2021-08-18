@@ -1,6 +1,6 @@
 module.exports = {
-    title: 'Hello VitePress',
-    description: 'Just playing around.',
+    title: '个人学习博客',
+    description: '小菜鸡...',
     base:'/LearningBlog/'
   }
   
