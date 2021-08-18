@@ -1,0 +1,19 @@
+{
+  "name": "LearningBlog",
+  "version": "1.0.0",
+  "description": "个人学习博客",
+  "main": "index.js",
+  "repository": "https://github.com/Lycan9510/LearningBlog.git",
+  "author": "lycan",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^0.16.1"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  }
+  
+  
+}
