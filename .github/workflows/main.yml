@@ -25,6 +25,6 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run build script
-        run: ./.github/scripts/build.sh
+        run: .github/scripts/build.sh
         shell: bash
           
