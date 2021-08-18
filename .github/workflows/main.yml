@@ -32,5 +32,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run build
         run: |
+          yarn
           yarn run docs:build
           
