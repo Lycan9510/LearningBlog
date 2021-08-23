@@ -1,0 +1,45 @@
+{
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}",
+  "editor.formatOnSave": false,
+  "editor.autoIndent": "full",
+  "editor.trimAutoWhitespace": false,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.vue": "vue",
+    "*.svg": "html"
+  },
+  "emmet.syntaxProfiles": {
+    "vue-html": "html",
+    "vue": "html"
+  },
+  // eslint
+  "eslint.lintTask.options": "-c ../.eslintrc.js --ignore-path ../.eslintignore .",
+  "eslint.packageManager": "yarn",
+  "eslint.options": {
+    "rulePaths": ["./scripts/eslint-rules"],
+    "plugins": ["vue"],
+    "extensions": [
+      ".js",
+      ".vue"
+    ]
+  },
+  // vuelint
+  "vetur.format.scriptInitialIndent": true,
+  "vetur.format.styleInitialIndent": true,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.less": "prettier",
+  "vetur.validation.style": true,
+  // stylelint
+  "stylelint.enable": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+}
