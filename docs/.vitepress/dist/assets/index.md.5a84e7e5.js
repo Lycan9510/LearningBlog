@@ -1,0 +1,1 @@
+import{o as t,c as e}from"./app.9332e4e2.js";const a='{"title":"Home","description":"","frontmatter":{"home":true,"actionText":"简历","actionLink":"/Resume/","altActionText":"快速上手","altActionLink":"/Documentation/javascript/"},"relativePath":"index.md","lastUpdated":1629614459695}',i={};i.render=function(a,i,n,o,r,c){return t(),e("div")};export{a as __pageData,i as default};

@@ -29,7 +29,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 
 ### 步骤3 启用虚拟机功能
 
-在安装WSL 2之前，你必须启用**虚拟机平台**的可选功能。你的机器将需要[虚拟化功能](./troubleshooting.md#error-0x80370102-thevirtual-machine-could-not-be-started-becaus-a-requireive-feature-is-installed)来使用这一功能。
+在安装WSL 2之前，你必须启用**虚拟机平台**的可选功能。你的机器将需要[虚拟化功能](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#error-0x80370102-the-virtual-machine-could-not-be-started-because-a-required-feature-is-not-installed)来使用这一功能。
 
 以管理员身份打开PowerShell并运行:
 
@@ -66,7 +66,7 @@ wsl --set-default-version 2
 
 1. 打开[Microsoft Store](https://aka.ms/wslstore)，选择你喜欢的Linux发行版。
 
-    ![查看微软商店中的Linux发行版](media/store.png)
+    ![查看微软商店中的Linux发行版](./media/store.png)
 
     以下链接将打开每个发行版的微软商店页面。
 
@@ -84,27 +84,27 @@ wsl --set-default-version 2
 
 2. 在发行版的页面上，选择 "获取"。
 
-    ![微软商店中的Linux发行版](media/UbuntuStore.png)
+    ![微软商店中的Linux发行版](./media/UbuntuStore.png)
 
 第一次启动新安装的Linux发行版时，会打开一个控制台窗口，你会被要求等待一两分钟，让文件解压缩并存储在你的电脑上。以后所有的启动都应该在一秒钟内完成。
 
-然后你将需要[为你的新Linux发行版创建一个用户账户和密码](./user-support.md)。
+然后你将需要为你的新Linux发行版[创建一个用户账户和密码](https://docs.microsoft.com/en-us/windows/wsl/user-support)。
 
-![在Windows控制台中解压Ubuntu](media/UbuntuInstall.png)
+![在Windows控制台中解压Ubuntu](./media/UbuntuInstall.png)
 
 **恭喜你! 你已经成功地安装并设置了一个与你的Windows操作系统完全集成的Linux发行版！**。
 
 ## 安装Windows终端
 
-Windows终端可以实现多个标签（在多个Linux命令行、Windows命令提示符、PowerShell、Azure CLI等之间快速切换），创建自定义键绑定（打开或关闭标签的快捷键、复制+粘贴等），使用搜索功能，以及自定义主题（颜色方案、字体样式和大小、背景图像/模糊/透明）。[了解更多。](/windows/terminal)
+Windows终端可以实现多个标签（在多个Linux命令行、Windows命令提示符、PowerShell、Azure CLI等之间快速切换），创建自定义键绑定（打开或关闭标签的快捷键、复制+粘贴等），使用搜索功能，以及自定义主题（颜色方案、字体样式和大小、背景图像/模糊/透明）。[了解更多](https://docs.microsoft.com/en-us/windows/terminal/)。
 
-[安装Windows终端](/windows/terminal/get-started)。
+[安装Windows终端](https://docs.microsoft.com/en-us/windows/terminal/get-started)。
 
-  ![Windows终端](media/terminal.png)
+  ![Windows终端](./media/terminal.png)
 
 ### 将你的发行版本设置为WSL 1或WSL 2
 
-你可以通过打开PowerShell命令行并输入命令（仅在[Windows Build 18362或更高版本](ms-settings:windowsupdate)中可用）来检查分配给你所安装的每个Linux发行版的WSL版本。`wsl -l -v
+你可以通过打开PowerShell命令行并输入命令（仅在Windows Build 18362或更高版本中可用）来检查分配给你所安装的每个Linux发行版的WSL版本。`wsl -l -v
 
 ```powershell
 wsl --list --verbose
@@ -119,7 +119,7 @@ wsl --set-version <distribution name> <versionNumber>（设置版本）。
 请确保将`<发行版名称>`替换为你的发行版的实际名称，`<版本号>`替换为数字'1'或'2'。你可以在任何时候通过运行与上面相同的命令，将 "2 "替换为 "1"，来改回WSL 1。
 
 > [！注意]
-> 从WSL 1到WSL 2的更新可能需要几分钟的时间才能完成，这取决于你的目标分布的大小。如果你正在运行来自Windows 10周年更新或创意者更新的WSL 1的旧（传统）安装，你可能会遇到一个更新错误。请按照这些说明来[卸载和删除任何遗留发行版](./install-legacy.md#uninstallingremoving-the-legacy-distro)。
+> 从WSL 1到WSL 2的更新可能需要几分钟的时间才能完成，这取决于你的目标分布的大小。如果你正在运行来自Windows 10周年更新或创意者更新的WSL 1的旧（传统）安装，你可能会遇到一个更新错误。请按照这些说明来[卸载和删除任何遗留发行版](https://docs.microsoft.com/en-us/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro)。
 >
 > 如果`wsl --set-default-version`的结果是一个无效的命令，输入`wsl --help`。如果`--set-default-version`没有被列出，这意味着你的操作系统不支持它，你需要更新到1903版本，Build 18362或更高。如果你的操作系统是Build 19041 for ARM64，在使用PowerShell时，这个命令可能会失败，在这种情况下，你可以使用*Command Prompt*来代替发出``wsl.exe`命令。
 >
@@ -145,7 +145,7 @@ wsl --set-default-version 2
 
 ### 安装相关包
 
-```brew
+```
 brew install node
 brew install yarn
 brew install mysql
@@ -154,19 +154,20 @@ brew install redis
 
 ### mysql启动
 
-```brew
+```
 mysql.server start
 ```
 
 ### redis启动
 
 可根据安装完成后的提示手动启动redis
-![安装redis](media/redis.jpg)
+![安装redis](./media/redis.jpg)
 
 
 ## 参考链接
--  [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/en-us/windows/wsl/)
--  [Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
--  [mac下镜像飞速安装Homebrew教程](https://zhuanlan.zhihu.com/p/90508170)
--  [Homebrew 安装](https://brew.idayer.com/)
--  [Homebrew 官网](https://brew.sh/index_zh-cn)
+
+- [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/en-us/windows/wsl/)
+- [Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+- [mac下镜像飞速安装Homebrew教程](https://zhuanlan.zhihu.com/p/90508170)
+- [Homebrew 安装](https://brew.idayer.com/)
+- [Homebrew 官网](https://brew.sh/index_zh-cn)
