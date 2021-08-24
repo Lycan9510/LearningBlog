@@ -31,6 +31,13 @@ module.exports = {
             { text: 'CSS', link: '/Documentation/css/' },
           ],
         },
+        {
+          text: '工作环境',
+          children: [
+            { text: '简介', link: '/Documentation/environment/' },
+            { text: 'Windows 子系统 Linux 安装指南', link: '/Documentation/environment/wsl' },
+          ],
+        },
       ],
     },
     // 默认是 false, 设置为 true 来启用
