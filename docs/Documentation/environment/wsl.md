@@ -25,7 +25,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 要检查你的版本和构建号，选择**Windows标志键+R**，输入**winver**，选择**OK**。在设置菜单中[更新到最新的Windows版本]（ms-settings:windowsupdate）。
 
 > [！注意]
-> 如果你运行的是Windows 10的1903或1909版本，从你的Windows菜单中打开 "设置"，导航到 "更新和安全 "并选择 "检查更新"。你的构建号必须是18362.1049+或18363.1049+，小构建号超过.1049。阅读更多。[WSL 2支持即将进入Windows 10版本1903和1909]（https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/）。参见[故障排除说明](./troubleshooting.md#im-on-windows-10-version-1903-and-i-still-do-not-se-options-for-wsl-2)。
+> 如果你运行的是Windows 10的1903或1909版本，从你的Windows菜单中打开 "设置"，导航到 "更新和安全 "并选择 "检查更新"。你的构建号必须是18362.1049+或18363.1049+，小构建号超过.1049。阅读更多。[WSL 2支持即将进入Windows 10版本1903和1909]（https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/）。参见[故障排除说明](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2)。
 
 ### 步骤3 启用虚拟机功能
 
